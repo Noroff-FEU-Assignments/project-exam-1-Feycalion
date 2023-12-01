@@ -1,0 +1,120 @@
+header {
+  background-color: var(--primary-red);
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.blogtitle {
+  padding: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header div a {
+  font-family: "Questrial", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: var(--primary-white);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+
+header div p {
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  font-size: 1.2rem;
+}
+header nav {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  background-color: var(--primary-white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  list-style: none;
+}
+
+nav li {
+  color: var(--primary-red);
+  transition: 0.6s;
+}
+
+nav li:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-red);
+  padding: 0px 1rem;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    margin: 0 0 30px 0;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  header div a {
+    text-align: start;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  header div h1 {
+    font-size: 1.2rem;
+  }
+
+  header div p {
+    font-size: 1rem;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  header nav li {
+    text-align: center;
+  }
+}

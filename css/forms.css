@@ -1,0 +1,123 @@
+.contact-wrapper {
+  margin-top: 12rem;
+  display: flex;
+  gap: 8rem;
+  font-family: "Questrial", sans-serif;
+  font-size: 1rem;
+  color: var(--primary-text);
+}
+
+.names {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 306px;
+  gap: 0.6rem;
+}
+
+.text-snippet {
+  display: flex;
+  flex-direction: column;
+  max-width: 346px;
+  gap: 1rem;
+  padding: 0.8rem;
+}
+
+.text-snippet h2 {
+  font-size: 1.2rem;
+}
+
+.text-snippet p {
+  line-height: 1.6rem;
+}
+
+.text-snippet img {
+  border-radius: 500px;
+  padding: 1rem 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+  height: 40px;
+  border: 1px solid var(--primary-red);
+  padding: 8px;
+  border-radius: 0.2rem;
+}
+
+input:focus {
+  outline: 1.4px solid var(--primary-red);
+}
+
+textarea:focus {
+  outline: 1.4px solid var(--primary-red);
+}
+
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  color: #9999b1;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+}
+
+.error {
+  color: red;
+}
+
+/* Media queries */
+
+@media (max-width: 1250px) {
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 1rem;
+  }
+
+  text-snippet,
+  .input-wrapper {
+    max-width: 160%;
+  }
+}
+
+@media (max-width: 776px) {
+  .names {
+    flex-direction: column;
+  }
+
+  .text-snippet img {
+    padding: 1rem;
+  }
+
+  .text-snippet,
+  .input-wrapper {
+    max-width: 100%;
+  }
+}

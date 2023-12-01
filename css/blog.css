@@ -1,0 +1,146 @@
+.imgstyle {
+  border-radius: 4px;
+  max-width: 600px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.data-container {
+  display: grid;
+  gap: 4rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-radius: 78px;
+  padding: 4rem;
+  font-family: "Questrial", sans-serif;
+  place-content: center;
+  color: var(--primary-text);
+  margin: 4rem 0;
+}
+
+.data-container h1 {
+  font-size: 1.4rem;
+}
+
+.data-container p {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  line-height: 1.4rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+  color: var(--primary-text);
+  transition: transform 0.1s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.container span {
+  color: #5d5e76;
+  font-size: 1.1rem;
+}
+
+.categories {
+  display: flex;
+  gap: 1.4rem;
+}
+
+/* Button */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.load-more-btn {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  border: 1px solid var(--primary-red);
+  border-radius: 0.2rem;
+  padding: 8px 12px;
+  margin: 0 0 10rem 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.load-more-btn:hover {
+  background-color: #fcfbf8;
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+}
+
+/* Spinner */
+
+#spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  border-top: 4px solid var(--primary-red);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .imgstyle {
+    height: 150px;
+  }
+
+  .data-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 2rem;
+    border-radius: 24px;
+  }
+
+  .data-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .data-container p {
+    font-size: 1rem;
+  }
+
+  .container {
+    gap: 0.4rem;
+  }
+
+  .container span {
+    font-size: 1rem;
+  }
+
+  .categories {
+    gap: 1rem;
+  }
+
+  .load-more-btn {
+    margin-bottom: 4rem;
+  }
+}

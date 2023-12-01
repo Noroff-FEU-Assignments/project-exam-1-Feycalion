@@ -1,0 +1,294 @@
+/* Seasonal */
+
+.seasonal-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--primary-yellow);
+  display: flex;
+  justify-content: center;
+  color: var(--primary-text);
+  font-family: "Poppins", sans-serif;
+  gap: 3rem;
+  padding: 5rem 0;
+}
+
+.seasonal-rec {
+  max-width: 1200px;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.seasonal-text,
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 1rem;
+  justify-content: center;
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+
+.text-wrapper h2 {
+  font-size: 2.2rem;
+  font-weight: 200;
+  white-space: nowrap;
+}
+
+.text-wrapper {
+  gap: 2rem;
+}
+
+.read-more {
+  font-family: "Questrial", sans-serif;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  line-height: 1.4rem;
+  color: var(--primary-text);
+}
+
+.seasonal-rec img {
+  border-radius: 4px;
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Trending */
+
+.trending-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 446px;
+  position: relative;
+  margin: 6rem auto;
+}
+
+/* Cont. on carousel.css */
+
+/* Newsletter */
+
+.newsletter {
+  height: 16rem;
+  background-color: var(--primary-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text);
+}
+
+.newsletter-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.newsletter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Questrial", sans-serif;
+  gap: 6rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 306px;
+  gap: 0.6rem;
+}
+
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+  height: 40px;
+  border: 1px solid var(--primary-red);
+  padding: 0.4rem;
+  border-radius: 3px;
+}
+
+input:focus {
+  outline: 1.4px solid var(--primary-red);
+}
+
+textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+textarea:focus {
+  outline: 1.4px solid var(--primary-red);
+}
+
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  color: #9999b1;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--primary-red);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+}
+
+/* About */
+
+.about-wrapper {
+  display: flex;
+  min-width: 306px;
+  gap: 5rem;
+  font-family: "Questrial", sans-serif;
+  color: var(--primary-text);
+  line-height: 2rem;
+  margin: 8rem 0;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 34rem;
+  gap: 1rem;
+}
+
+.about-content h2 {
+  font-size: 1.2rem;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.credit img {
+  margin: 2rem 0;
+  height: 4rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.credit img:hover {
+  transform: scale(1.1);
+}
+
+.the-duchess img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1%;
+}
+
+/* Media queries */
+
+@media (max-width: 1270px) {
+  .about-container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    min-width: none;
+  }
+
+  .about-content {
+    max-width: none;
+  }
+
+  .about-wrapper,
+  .about-content,
+  .credit {
+    gap: 1.5rem;
+  }
+
+  .credit img {
+    height: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .seasonal-container {
+    padding: 3rem 0;
+  }
+
+  .seasonal-rec {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .seasonal-text,
+  .text-wrapper {
+    max-width: 90%;
+    margin: 0;
+  }
+
+  .text-wrapper h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-wrapper p,
+  .text-wrapper h3 {
+    font-size: 1rem;
+  }
+
+  .seasonal-rec img {
+    max-width: 90%;
+    max-height: none;
+  }
+
+  .newsletter-wrapper {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .trending-container {
+    margin: 4rem 0 10rem 0;
+  }
+}
+
+@media (max-width: 846px) {
+  .trending-container {
+    margin: 2rem 0 2rem 0;
+    height: 424px;
+  }
+}
+
+@media (max-width: 546px) {
+  .trending-container {
+    height: 364px;
+  }
+  .text-wrapper h2 {
+    font-size: 1.4rem;
+  }
+  .newsletter {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .newsletter-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .about-wrapper {
+    margin: 4rem 0;
+    line-height: 1.6rem;
+  }
+
+  .about-content h2,
+  .about-content p {
+    font-size: 1rem;
+  }
+}
